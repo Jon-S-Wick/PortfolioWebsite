@@ -173,3 +173,17 @@ code {
     animation: none !important;
   }
 }
+
+
+.column{
+  float: left;
+  width: 50%;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.box{
+   color: "#283618";
+}

@@ -7,8 +7,10 @@
   "module": "src/index.tsx",
   "scripts": {
     "dev": "bun --hot src/index.tsx",
-    "build": "bun build ./src/index.html --outdir=dist --sourcemap --target=browser --minify --define:process.env.NODE_ENV='\"production\"' --env='BUN_PUBLIC_*'",
-    "start": "NODE_ENV=production bun src/index.tsx"
+    "build": "bun build ./src/index.html --outdir=dist --sourcemap --target=browser --minify --define:process.env.NODE_ENV='\"production\"' --env='BUN_PUBLIC_*' && cp -r public/* dist/",
+    "start": "NODE_ENV=production bun src/index.tsx",
+    "deploy": "wrangler pages deploy dist",
+    "preview": "wrangler pages dev dist"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -19,17 +21,19 @@
     "@pdftron/webviewer": "^11.6.1",
     "@react-pdf-viewer/core": "^3.12.0",
     "@react-pdf-viewer/default-layout": "^3.12.0",
+    "devicon": "^2.17.0",
     "pdfjs-dist": "3.4.120",
     "react": "^19.1.0",
     "react-bootstrap": "^2.10.10",
     "react-dom": "^19",
     "react-icons": "^5.5.0",
-    "react-pdf": "^10.0.1",
+    "react-pdf": "^10.4.1",
     "react-router-dom": "^7.7.0"
   },
   "devDependencies": {
     "@types/bun": "latest",
     "@types/react": "^19",
-    "@types/react-dom": "^19"
+    "@types/react-dom": "^19",
+    "wrangler": "^4.90.0"
   }
 }

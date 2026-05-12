@@ -15,6 +15,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 import { createTheme } from '@mui/material/styles';
+import { FaGithub, FaLinkedin, FaOrcid } from "react-icons/fa";
 
 
 
@@ -85,31 +86,61 @@ export default function DrawerAppBar(props: Props) {
             sx={{ flexGrow: 1, display: { xs: 'block', sm: 'block' } }}
           >
             Jon Wick
-
-
           </Typography>
+
         </Toolbar>
-        <Box>
+        <Box
+          sx={{
+            display: { xs: "none", sm: "flex" },
+            alignItems: "center",
+            justifyContent: "center",
+            position: "relative",
+            px: 2,
+          }}
+        >
+          {leftPages.map((page) => (
+            <Button sx={{ color: "#fff" }} key={page.name} component={Link} to={page.path}>
+              {page.name}
+            </Button>
+          ))}
+          <Button
+            sx={{ color: "#fff" }}
+            onClick={() => {
+              document.getElementById("skills")?.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
+            Skills
+          </Button>
 
-            <Typography
-              variant="h4"
-              component="div"
-              sx={{ textAlign:'center', flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+          <Box sx={{ position: "absolute", right: 16, display: "flex", gap: 0.5 }}>
+            <IconButton
+              color="inherit"
+              href="https://github.com/Jon-S-Wick"
+              target="_blank"
+              rel="noopener noreferrer"
+              size="small"
             >
-
-              {leftPages.map((page) => (
-
-                <Button sx={{ color: '#fff' }}
-                  key={page.name}
-                  color="inherit"
-                  component={Link}
-                  to={page.path}
-                >
-                  {page.name}
-                </Button>
-              ))}
-
-            </Typography>
+              <FaGithub />
+            </IconButton>
+            <IconButton
+              color="inherit"
+              href="https://linkedin.com/in/jonathan-wick-75aa52277"
+              target="_blank"
+              rel="noopener noreferrer"
+              size="small"
+            >
+              <FaLinkedin />
+            </IconButton>
+            <IconButton
+              color="inherit"
+              href="https://orcid.org/0009-0006-6282-2458"
+              target="_blank"
+              rel="noopener noreferrer"
+              size="small"
+            >
+              <FaOrcid />
+            </IconButton>
+          </Box>
         </Box>
       </AppBar>
       <nav>

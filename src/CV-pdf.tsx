@@ -1,49 +1,33 @@
-import { Worker, Viewer } from '@react-pdf-viewer/core';
-import '@react-pdf-viewer/core/lib/styles/index.css';
-import '@react-pdf-viewer/default-layout/lib/styles/index.css';
-import { useEffect, useRef } from 'react';
-import WebViewer from '@pdftron/webviewer';
-import { useState } from 'react';
-import { Document, Page } from 'react-pdf';
-import { pdfjs } from 'react-pdf';
+import { Viewer, Worker } from "@react-pdf-viewer/core";
+import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
+import { Box, Typography } from "@mui/material";
 
+import "@react-pdf-viewer/core/lib/styles/index.css";
+import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 
-// Set workerSrc manually to avoid bundling issues
-pdfjs.GlobalWorkerOptions.workerSrc = `./pdf.worker.min.js`;
+const CV_URL =
+  "https://raw.githubusercontent.com/Jon-S-Wick/CV/master/Jon-WickCV.pdf";
+const WORKER_URL =
+  "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js";
 
-type Props = {
-  file: string; // path or URL to PDF
-};
-
-export  function PdfViewer({ file }: Props) {
-  const [numPages, setNumPages] = useState<number | null>(null);
-
-  const onLoadSuccess = ({ numPages }: { numPages: number }) => {
-    setNumPages(numPages);
-  };
+export default function CVpdf() {
+  const defaultLayoutPluginInstance = defaultLayoutPlugin();
 
   return (
-    <div>
-      <Document file={file} onLoadSuccess={onLoadSuccess}>
-        {Array.from(new Array(numPages), (_, index) => (
-          <Page key={index + 1} pageNumber={index + 1} />
-        ))}
-      </Document>
-    </div>
+    <Box
+      sx={{
+        height: "90vh",
+        display: "flex",
+        flexDirection: "column",
+        mx: "auto",
+        maxWidth: 1000,
+      }}
+    >
+      <Box sx={{ flex: 1 }}>
+        <Worker workerUrl={WORKER_URL}>
+          <Viewer fileUrl={CV_URL} plugins={[defaultLayoutPluginInstance]} />
+        </Worker>
+      </Box>
+    </Box>
   );
-}
-
-export default function pdfPage(){
-    return (
-        <div>
-            <h1>
-                hi
-            </h1>
-            <Document
-            file="./Jon-WickCV.pdf"
-            ></Document>
-
-    </div>
-
-    );
 }

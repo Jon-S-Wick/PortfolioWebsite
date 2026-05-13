@@ -105,11 +105,6 @@ export default function Footer() {
             </Box>
           ))}
         </Box>
-        <br />
-
-        <Typography variant="h8" gutterBottom>
-          *This website was built with the assistance of AI
-        </Typography>
       </Container>
     </Box>
   );

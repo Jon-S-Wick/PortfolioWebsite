@@ -1,32 +1,41 @@
+import React, { useEffect } from "react";
+import { Container } from "react-bootstrap";
+import HomeText from "./HomeText.tsx";
+import Box from "@mui/material/Box";
+import Introduction from "./Introduction.tsx";
+import Skills from "./Skills.tsx";
+import ResearchExperience from "./ResearchExperience.tsx";
+import OtherExperience from "./OtherExperience.tsx";
+import { useLocation } from "react-router-dom";
 
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import homeLogo from "./dna-svgrepo-com.svg";
-import HomeText from "./HomeText.tsx"
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid'
-import profilephoto from 'public/images/pro-FoEfCRZd.jpeg'
-import Introduction from './Introduction.tsx'
-import Skills from "./Skills.tsx"
+export default function Home() {
+  const location = useLocation();
 
-export default function Home(){
-    return (
-      <Container sx={{width:'100vw'}}>
+  useEffect(() => {
+    const state = location.state as { scrollTo?: string } | null;
+    if (state?.scrollTo) {
+      const el = document.getElementById(state.scrollTo);
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }, [location]);
 
-                  <Introduction/>
+  return (
+    <Container sx={{ width: "100vw" }}>
+      <Introduction />
 
+      <Box
+        sx={{ padding: 5, display: "flex", bgcolor: "#2e3532", width: "80vw" }}
+      >
+        <HomeText />
+      </Box>
+      <ResearchExperience />
+      <OtherExperience />
 
-          <Box  sx={{ padding:5,display: 'flex', bgcolor:"#2e3532" , width:'80vw'}}>
-              <HomeText/>
-
-          </Box>
-               <Skills/>
-      </Container>
-
-
-
-
-
-    )
+      <Skills />
+    </Container>
+  );
 }

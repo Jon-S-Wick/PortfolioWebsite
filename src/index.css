@@ -166,6 +166,10 @@ code {
 .response-area::placeholder {
   color: rgba(251, 240, 223, 0.4);
 }
+img {
+  max-width: 100%;
+  height: auto;
+}
 @media (prefers-reduced-motion) {
   *,
   ::before,

@@ -2,7 +2,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 function Home2() {
   return (
-    <Container fluid className="home-about-section" id="about">
+    <Container fluid className="home-about-section" id="about" style={{ scrollMarginTop: 70 }}>
       <Container>
         <h1>Jon Wick</h1>
         <h2>WWU 26' Molecular and Cellular biology, CS minor</h2>
@@ -21,7 +21,7 @@ function Home2() {
           Ever since then I have been interested in education and research.
           Participating in educational research with Dr. Sushil Oswal, UW and
           RNAi research with Dr. Lee WWU. I am interested in pursuing a career
-          in research with a focus on understanind molecular mechanisms of
+          in research with a focus on understanding molecular mechanisms of
           disease progression and translating that knowledge into potential
           treatments.
         </h3>

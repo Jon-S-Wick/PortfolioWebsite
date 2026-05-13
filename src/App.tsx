@@ -9,6 +9,7 @@ import { unstable_createMuiStrictModeTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Home from "./Home.tsx";
 import CVpdf from "./CV-pdf.tsx";
+import PersonalLife from "./PersonalLife.tsx";
 import {
   BrowserRouter as Router,
   Route,
@@ -43,6 +44,7 @@ export function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/CV" element={<CVpdf />} />
+            <Route path="/PersonalLife" element={<PersonalLife />} />
           </Routes>
 
           <Footer />

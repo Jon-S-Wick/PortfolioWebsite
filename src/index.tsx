@@ -1,11 +1,11 @@
-import { serve } from "bun";
+import { serve, file as bunFile } from "bun";
+import { readdirSync } from "fs";
 import index from "./index.html";
+
+const publicDir = `${import.meta.dir}/../public`;
 
 const server = serve({
   routes: {
-    // Serve index.html for all unmatched routes.
-    "/*": index,
-
     "/api/hello": {
       async GET(req) {
         return Response.json({
@@ -27,13 +27,45 @@ const server = serve({
         message: `Hello, ${name}!`,
       });
     },
+
+    "/api/images/:section": async req => {
+      const section = req.params.section;
+      const dir = `${publicDir}/images/${section}`;
+
+      let files: string[];
+      try {
+        files = readdirSync(dir).filter((f) =>
+          /\.(png|jpg|jpeg|webp|gif|avif)$/i.test(f)
+        );
+      } catch {
+        files = [];
+      }
+
+      const images = files.map((f) => ({
+        original: `/images/${section}/${f}`,
+        thumbnail: `/images/${section}/${f}`,
+      }));
+
+      return Response.json(images, {
+        headers: { "Content-Type": "application/json" },
+      });
+    },
+
+    "/images/:section/:file": async req => {
+      const { section, file } = req.params;
+      const imageFile = bunFile(`${publicDir}/images/${section}/${file}`);
+      if (await imageFile.exists()) {
+        return new Response(imageFile);
+      }
+      return new Response("Not found", { status: 404 });
+    },
+
+    // Serve index.html for all unmatched routes (SPA fallback).
+    "/*": index,
   },
 
   development: process.env.NODE_ENV !== "production" && {
-    // Enable browser hot reloading in development
     hmr: true,
-
-    // Echo console logs from the browser to the server
     console: true,
   },
 });

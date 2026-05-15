@@ -41,6 +41,18 @@ export default function Introduction() {
             I'm Jon Wick
           </Typography>
           <Typography
+            variant="h3"
+            component="div"
+            textAlign={"center"}
+            sx={{
+              justifyContent: "center",
+              flexGrow: 1,
+              display: { xs: "block", sm: "block" },
+            }}
+          >
+            Molecular, Cellular, and Computational Biologist
+          </Typography>
+          <Typography
             variant="body2"
             component="div"
             textAlign={"center"}

@@ -1,5 +1,11 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "bun-react-template",
-  "pages_build_output_dir": "dist"
+  "name": "portfolio",
+  "pages_build_output_dir": "dist",
+  "r2_buckets": [
+    {
+      "binding": "IMAGE_BUCKET",
+      "bucket_name": "websiteimages"
+    }
+  ]
 }

@@ -109,7 +109,7 @@ function SkillIcon({ icon, name, link }: SkillItem) {
   if (link) {
     return (
       <Tooltip title={link}>
-        <a href={link} target="_blank" rel="noopener noreferrer">
+        <a href={link} target="_blank" rel="noopener noreferrer" style={{ color: "inherit", textDecoration: "none" }}>
           {content}
         </a>
       </Tooltip>

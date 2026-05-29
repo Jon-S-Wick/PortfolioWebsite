@@ -13,7 +13,7 @@ import Skills from "./Skills.tsx";
 export function LeeLab() {
   return (
     <Container>
-      <h2>Undergraduate research | Lee Lab @ WWU</h2>
+      <h2>Undergraduate Research | Lee Lab @ WWU</h2>
       <h4>June 2024 - present </h4>
 
       <Grid container spacing={5} width="80vw" sx={{ alignItems: "center" }}>
@@ -21,20 +21,23 @@ export function LeeLab() {
           <Typography
             component="div"
             textAlign={"left"}
-            sx={{ flexGrow: 1, display: { xs: "block", sm: "block" } }}
+            sx={{
+              flexGrow: 1,
+              display: { xs: "block", sm: "block" },
+            }}
           >
             During my first summer at WWU I joined the Lee lab. The Lee lab is a
             team of researchers investigating a novel role of small guide
-            molecules (small RNAs) in maintaining genome integrity. My role
-            in the lab is to investigate origins of these small RNAs and
-            understand how changes in these sRNAs results in the phenotypes we
-            are seeing. I have developed a new pipeline and tools to analyze
-            both of these questions. During my time in the lab I have learned
-            extensive technical skills such as Western blots, genomic analysis,
-            and refined programming languages proficiency for these tasks. I
-            have also gained important soft skills such as independence from
-            running my own project, communication with lab members and outside
-            of the lab,             and presentation skills.{" "}
+            molecules (small RNAs) in maintaining genome integrity. My role in
+            the lab is to investigate origins of these small RNAs and understand
+            how changes in these sRNAs results in the phenotypes we are seeing.
+            I have developed a new pipeline and tools to analyze both of these
+            questions. During my time in the lab I have learned extensive
+            technical skills such as Western blots, genomic analysis, and
+            refined programming languages proficiency for these tasks. I have
+            also gained important soft skills such as independence from running
+            my own project, communication with lab members and outside of the
+            lab, and presentation skills.{" "}
           </Typography>
         </Grid>
         <Grid size={4}>
@@ -48,7 +51,15 @@ export function LeeLab() {
               borderRadius: 10,
             }}
           />
-          <Typography variant="caption" sx={{ display: "block", textAlign: "center", mt: 1, fontStyle: "italic" }}>
+          <Typography
+            variant="caption"
+            sx={{
+              display: "block",
+              textAlign: "center",
+              mt: 1,
+              fontStyle: "italic",
+            }}
+          >
             Tetrahymena thermophila — Robinson R (2006) PLoS Biol, CC BY 2.5
           </Typography>
         </Grid>
@@ -56,7 +67,6 @@ export function LeeLab() {
     </Container>
   );
 }
-
 
 export function EduRes() {
   return (
@@ -81,7 +91,10 @@ export function EduRes() {
           <Typography
             component="div"
             textAlign={"left"}
-            sx={{ flexGrow: 1, display: { xs: "block", sm: "block" } }}
+            sx={{
+              flexGrow: 1,
+              display: { xs: "block", sm: "block" },
+            }}
           >
             During and following my time in SOTAbots I joined a group interested
             in understanding the mechanisms of teaching in a student-led
@@ -110,7 +123,7 @@ export function EduRes() {
 export function Biotech() {
   return (
     <Container>
-      <h2>Intern | Rain Incubator</h2>
+      <h2>Biotech Intern | Rain Incubator</h2>
       <h4>May 2022 - December 2022 </h4>
 
       <Grid container spacing={5} width="80vw" sx={{ alignItems: "center" }}>
@@ -119,7 +132,10 @@ export function Biotech() {
             component="div"
             textAlign={"left"}
             variant="body1"
-            sx={{ flexGrow: 1, display: { xs: "block", sm: "block" } }}
+            sx={{
+              flexGrow: 1,
+              display: { xs: "block", sm: "block" },
+            }}
           >
             My first research experience started in the summer of 2022. I joined
             RAIN Incubator to investigate novel methods for detecting the
@@ -151,7 +167,15 @@ export function Biotech() {
               borderRadius: 10,
             }}
           />
-          <Typography variant="caption" sx={{ display: "block", textAlign: "center", mt: 1, fontStyle: "italic" }}>
+          <Typography
+            variant="caption"
+            sx={{
+              display: "block",
+              textAlign: "center",
+              mt: 1,
+              fontStyle: "italic",
+            }}
+          >
             Agarose gel with DNA ladders — Dirk Hünniger, CC BY-SA 2.0
           </Typography>
         </Grid>

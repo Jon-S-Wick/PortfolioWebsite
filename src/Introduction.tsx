@@ -52,24 +52,6 @@ export default function Introduction() {
           >
             Molecular, Cellular, and Computational Biologist
           </Typography>
-          <br />
-          <Typography
-            variant="body2"
-            component="div"
-            textAlign={"center"}
-            sx={{
-              justifyContent: "center",
-              flexGrow: 1,
-              fontWeight: 10,
-              display: { xs: "block", sm: "block" },
-              width: "50%",
-              mx: "auto",
-            }}
-          >
-            **This website was a side project to learn how to build a website
-            and for personal use on the back end. I am not a front-end
-            engineer.**
-          </Typography>
         </Grid>
         <Grid size={4}>
           <Box

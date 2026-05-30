@@ -3,8 +3,8 @@ import { Box, Card, Grid, Tooltip, Typography } from "@mui/material";
 import type { ElementType } from "react";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { FaDna, FaFlask, FaMicrosoft, FaTerminal } from "react-icons/fa";
-import { GiDna1, GiTestTubes as GiTestTubeRack, GiWell } from "react-icons/gi";
+import { FaBook, FaDna, FaMicrosoft, FaTerminal } from "react-icons/fa";
+import { GiDna1, GiDna2 } from "react-icons/gi";
 import { SiImagej } from "react-icons/si";
 
 import WB from "../docs/icons/WB.svg";
@@ -14,6 +14,11 @@ import snapgeneLogo from "../docs/icons/snapgene-logo.svg";
 
 import bashIcon from "devicon/icons/bash/bash-original.svg";
 import bunIcon from "devicon/icons/bun/bun-original.svg";
+import dockerIcon from "devicon/icons/docker/docker-original.svg";
+import gitIcon from "devicon/icons/git/git-original.svg";
+import numpyIcon from "devicon/icons/numpy/numpy-original.svg";
+import pandasIcon from "devicon/icons/pandas/pandas-original.svg";
+import scikitlearnIcon from "devicon/icons/scikitlearn/scikitlearn-original.svg";
 import cIcon from "devicon/icons/c/c-original.svg";
 import cppIcon from "devicon/icons/cplusplus/cplusplus-original.svg";
 import javaIcon from "devicon/icons/java/java-original.svg";
@@ -35,38 +40,115 @@ interface SkillItem {
 }
 
 const BiologySkills: SkillItem[] = [
-  { name: "Genomic Data Analysis", icon: riparian, link: "https://en.wikipedia.org/wiki/Genomics" },
-  { name: "Cell maintenance", icon: GiTestTubeRack, link: "https://en.wikipedia.org/wiki/Cell_culture" },
-  { name: "Cell culture", icon: GiWell, link: "https://en.wikipedia.org/wiki/Cell_culture" },
-  { name: "Western Blot", icon: WB, link: "https://en.wikipedia.org/wiki/Western_blot" },
-  { name: "PCR", icon: PCR, link: "https://en.wikipedia.org/wiki/Polymerase_chain_reaction" },
-  { name: "Reverse Transcriptase PCR", icon: GiDna1, link: "https://en.wikipedia.org/wiki/Reverse_transcription_polymerase_chain_reaction" },
+  {
+    name: "Genomic Data Analysis",
+    icon: riparian,
+    link: "https://en.wikipedia.org/wiki/Genomics",
+  },
+  // { name: "Cell maintenance", icon: "/images/skills/cell_culture_dish.webp", link: "https://en.wikipedia.org/wiki/Cell_culture" },
+  // { name: "Cell culture", icon: "/images/skills/cell_culture_dish.webp", link: "https://en.wikipedia.org/wiki/Cell_culture" },
+  {
+    name: "Western Blot",
+    icon: WB,
+    link: "https://en.wikipedia.org/wiki/Western_blot",
+  },
+  {
+    name: "PCR",
+    icon: PCR,
+    link: "https://en.wikipedia.org/wiki/Polymerase_chain_reaction",
+  },
+  {
+    name: "Reverse Transcriptase PCR",
+    icon: GiDna1,
+    link: "https://en.wikipedia.org/wiki/Reverse_transcription_polymerase_chain_reaction",
+  },
+  {
+    name: "Lit Review",
+    icon: FaBook,
+    link: "https://en.wikipedia.org/wiki/Literature_review",
+  },
+  {
+    name: "RNA-seq Analysis",
+    icon: FaDna,
+    link: "https://en.wikipedia.org/wiki/RNA-Seq",
+  },
+  {
+    name: "CRISPR",
+    icon: GiDna2,
+    link: "https://en.wikipedia.org/wiki/CRISPR",
+  },
 ];
 
 const Software: SkillItem[] = [
-  { name: "Command Line Interface", icon: FaTerminal, link: "https://en.wikipedia.org/wiki/Command-line_interface" },
+  {
+    name: "Command Line Interface",
+    icon: FaTerminal,
+    link: "https://en.wikipedia.org/wiki/Command-line_interface",
+  },
+  { name: "Git", icon: gitIcon, link: "https://git-scm.com/" },
+  { name: "Docker", icon: dockerIcon, link: "https://www.docker.com/" },
+  { name: "pandas", icon: pandasIcon, link: "https://pandas.pydata.org/" },
+  { name: "NumPy", icon: numpyIcon, link: "https://numpy.org/" },
+  {
+    name: "scikit-learn",
+    icon: scikitlearnIcon,
+    link: "https://scikit-learn.org/",
+  },
+  { name: "Biopython", icon: GiDna2, link: "https://biopython.org/" },
   { name: "Benchling", icon: FaDna, link: "https://www.benchling.com/" },
-  { name: "Microsoft Office/Libre Office", icon: FaMicrosoft, link: "https://en.wikipedia.org/wiki/Microsoft_Office" },
+  {
+    name: "Microsoft Office/Libre Office",
+    icon: FaMicrosoft,
+    link: "https://en.wikipedia.org/wiki/Microsoft_Office",
+  },
   { name: "Jupyter Notebook", icon: jupyterIcon, link: "https://jupyter.org/" },
-  { name: "Linux", icon: linuxIcon, link: "https://en.wikipedia.org/wiki/Linux" },
-  { name: "NixOS", icon: nixIcon, link: "https://nixos.org/" },
+  {
+    name: "Linux/NixOs",
+    icon: linuxIcon,
+    link: "https://en.wikipedia.org/wiki/Linux",
+  },
+  // { name: "NixOS", icon: nixIcon, link: "https://nixos.org/" },
   { name: "ImageJ", icon: SiImagej, link: "https://imagej.net/" },
   { name: "React", icon: reactIcon, link: "https://react.dev/" },
   { name: "bun", icon: bunIcon, link: "https://bun.sh/" },
-  { name: "Secure Shell (SSH)", icon: sshIcon, link: "https://en.wikipedia.org/wiki/Secure_Shell" },
+  {
+    name: "Secure Shell (SSH)",
+    icon: sshIcon,
+    link: "https://en.wikipedia.org/wiki/Secure_Shell",
+  },
   { name: "NeoVim", icon: neovimIcon, link: "https://neovim.io/" },
-  { name: "Snapgene", icon: snapgeneLogo, link: "https://www.snapgene.com/" },
+  {
+    name: "Snapgene/IGV",
+    icon: snapgeneLogo,
+    link: "https://www.snapgene.com/",
+  },
 ];
 
 const Programming: SkillItem[] = [
   { name: "Python", icon: pythonIcon, link: "https://www.python.org/" },
   { name: "Java", icon: javaIcon, link: "https://www.java.com/" },
   { name: "R", icon: rIcon, link: "https://www.r-project.org/" },
-  { name: "Bash/Zsh", icon: bashIcon, link: "https://en.wikipedia.org/wiki/Bash_(Unix_shell)" },
+  {
+    name: "Bash/Zsh",
+    icon: bashIcon,
+    link: "https://en.wikipedia.org/wiki/Bash_(Unix_shell)",
+  },
   { name: "C++", icon: cppIcon, link: "https://en.wikipedia.org/wiki/C%2B%2B" },
-  { name: "C", icon: cIcon, link: "https://en.wikipedia.org/wiki/C_(programming_language)" },
-  { name: "Nix", icon: nixIcon, link: "https://nixos.org/guides/how-nix-works" },
-  { name: "JavaScript", icon: javascriptIcon, link: "https://en.wikipedia.org/wiki/JavaScript" },
+  {
+    name: "C",
+    icon: cIcon,
+    link: "https://en.wikipedia.org/wiki/C_(programming_language)",
+  },
+  {
+    name: "Nix",
+    icon: nixIcon,
+    link: "https://nixos.org/guides/how-nix-works",
+  },
+  {
+    name: "JavaScript",
+    icon: javascriptIcon,
+    link: "https://en.wikipedia.org/wiki/JavaScript",
+  },
   { name: "SQL", icon: mysqlIcon, link: "https://en.wikipedia.org/wiki/SQL" },
 ];
 
@@ -75,41 +157,47 @@ function SkillIcon({ icon, name, link }: SkillItem) {
   const isXs = useMediaQuery(theme.breakpoints.down("sm"));
   const isSm = useMediaQuery(theme.breakpoints.between("sm", "md"));
   const iconSize = isXs ? 54 : isSm ? 68 : 80;
-  const content = typeof icon === "string" ? (
-    <Box
-      component="img"
-      src={icon}
-      alt={name}
-      sx={{
-        height: { xs: 80, sm: 100, md: 120 },
-        width: { xs: 80, sm: 100, md: 120 },
-        maxWidth: "100%",
-        mb: 1,
-      }}
-    />
-  ) : (
-    (() => {
-      const IconComponent = icon as ElementType;
-      return (
-        <Box
-          sx={{
-            height: { xs: 80, sm: 100, md: 120 },
-            width: { xs: 80, sm: 100, md: 120 },
-            mb: 1,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <IconComponent size={iconSize} />
-        </Box>
-      );
-    })()
-  );
+  const content =
+    typeof icon === "string" ? (
+      <Box
+        component="img"
+        src={icon}
+        alt={name}
+        sx={{
+          height: { xs: 80, sm: 100, md: 120 },
+          width: { xs: 80, sm: 100, md: 120 },
+          maxWidth: "100%",
+          mb: 1,
+        }}
+      />
+    ) : (
+      (() => {
+        const IconComponent = icon as ElementType;
+        return (
+          <Box
+            sx={{
+              height: { xs: 80, sm: 100, md: 120 },
+              width: { xs: 80, sm: 100, md: 120 },
+              mb: 1,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <IconComponent size={iconSize} />
+          </Box>
+        );
+      })()
+    );
   if (link) {
     return (
       <Tooltip title={link}>
-        <a href={link} target="_blank" rel="noopener noreferrer" style={{ color: "inherit", textDecoration: "none" }}>
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "inherit", textDecoration: "none" }}
+        >
           {content}
         </a>
       </Tooltip>
@@ -171,7 +259,7 @@ export default function Skills() {
     <Container id="skills" style={{ scrollMarginTop: 70 }}>
       <br />
       <SkillSection title="Biology Skills" items={BiologySkills} />
-      <SkillSection title="Software" items={Software} />
+      <SkillSection title="Software and Tools" items={Software} />
       <SkillSection title="Programming Languages" items={Programming} />
     </Container>
   );

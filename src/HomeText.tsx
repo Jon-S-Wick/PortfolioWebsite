@@ -10,7 +10,7 @@ function Home2() {
     >
       <Container>
         <h1>Jon Wick</h1>
-        <h2>WWU '26 Molecular and Cellular biology, CS minor</h2>
+        <h2>WWU '26 Molecular and Cellular Biology, CS minor</h2>
         <h3>
           I am a biologist and a programmer interested in an interdisciplinary
           approach to research.

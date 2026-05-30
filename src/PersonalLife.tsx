@@ -14,17 +14,7 @@ export function Family() {
       <h2>Family</h2>
 
       <Grid container spacing={5} width="80vw" sx={{ alignItems: "center" }}>
-        <Grid size={8} sx={{ alignItems: "center" }}>
-          <Typography
-            component="div"
-            textAlign={"left"}
-            sx={{ flexGrow: 1, display: { xs: "block", sm: "block" } }}
-          >
-            I grew up in Tacoma Washington
-          </Typography>
-        </Grid>
-
-        <Grid size={4}>
+        <Grid size={{ xs: 12, md: 4 }}>
           <Box
             component="img"
             src={profilephoto}
@@ -35,6 +25,15 @@ export function Family() {
               borderRadius: 10,
             }}
           />
+        </Grid>
+        <Grid size={{ xs: 12, md: 8 }} sx={{ alignItems: "center" }}>
+          <Typography
+            component="div"
+            textAlign={"left"}
+            sx={{ flexGrow: 1, display: { xs: "block", sm: "block" } }}
+          >
+            I grew up in Tacoma Washington
+          </Typography>
         </Grid>
       </Grid>
     </Container>
@@ -58,19 +57,7 @@ export function Hobbies() {
       <h2>Hiking and Climbing</h2>
 
       <Grid container spacing={5} width="80vw" sx={{ alignItems: "center" }}>
-        <Grid size={8} sx={{ alignItems: "center" }}>
-          <Typography
-            component="div"
-            textAlign={"left"}
-            sx={{ flexGrow: 1, display: { xs: "block", sm: "block" } }}
-          >
-            Since coming to WWU I have spent many weekends out on the mountain.
-            I have found hiking is the best way to balance hard work during the
-            week with a fun reset.
-          </Typography>
-        </Grid>
-
-        <Grid size={4}>
+        <Grid size={{ xs: 12, md: 4 }}>
           {loading ? (
             <Typography>Loading images...</Typography>
           ) : (
@@ -85,22 +72,23 @@ export function Hobbies() {
             />
           )}
         </Grid>
-      </Grid>
-
-      <h2>Circus</h2>
-
-      <Grid container spacing={5} width="80vw" sx={{ alignItems: "center" }}>
-        <Grid size={8} sx={{ alignItems: "center" }}>
+        <Grid size={{ xs: 12, md: 8 }} sx={{ alignItems: "center" }}>
           <Typography
             component="div"
             textAlign={"left"}
             sx={{ flexGrow: 1, display: { xs: "block", sm: "block" } }}
           >
-            I grew up in Tacoma Washington
+            Since coming to WWU I have spent many weekends out on the mountain.
+            I have found hiking is the best way to balance hard work during the
+            week with a fun reset.
           </Typography>
         </Grid>
+      </Grid>
 
-        <Grid size={4}>
+      <h2>Circus</h2>
+
+      <Grid container spacing={5} width="80vw" sx={{ alignItems: "center" }}>
+        <Grid size={{ xs: 12, md: 4 }}>
           <Box
             component="img"
             src={profilephoto}
@@ -111,23 +99,22 @@ export function Hobbies() {
               borderRadius: 10,
             }}
           />
+        </Grid>
+        <Grid size={{ xs: 12, md: 8 }} sx={{ alignItems: "center" }}>
+          <Typography
+            component="div"
+            textAlign={"left"}
+            sx={{ flexGrow: 1, display: { xs: "block", sm: "block" } }}
+          >
+            I grew up in Tacoma Washington
+          </Typography>
         </Grid>
       </Grid>
 
       <h2>Tech</h2>
 
       <Grid container spacing={5} width="80vw" sx={{ alignItems: "center" }}>
-        <Grid size={8} sx={{ alignItems: "center" }}>
-          <Typography
-            component="div"
-            textAlign={"left"}
-            sx={{ flexGrow: 1, display: { xs: "block", sm: "block" } }}
-          >
-            I grew up in Tacoma Washington
-          </Typography>
-        </Grid>
-
-        <Grid size={4}>
+        <Grid size={{ xs: 12, md: 4 }}>
           <Box
             component="img"
             src={profilephoto}
@@ -138,6 +125,15 @@ export function Hobbies() {
               borderRadius: 10,
             }}
           />
+        </Grid>
+        <Grid size={{ xs: 12, md: 8 }} sx={{ alignItems: "center" }}>
+          <Typography
+            component="div"
+            textAlign={"left"}
+            sx={{ flexGrow: 1, display: { xs: "block", sm: "block" } }}
+          >
+            I grew up in Tacoma Washington
+          </Typography>
         </Grid>
       </Grid>
     </Container>

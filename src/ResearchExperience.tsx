@@ -17,30 +17,7 @@ export function LeeLab() {
       <h4>June 2024 - present </h4>
 
       <Grid container spacing={5} width="80vw" sx={{ alignItems: "center" }}>
-        <Grid size={8} sx={{ alignItems: "center" }}>
-          <Typography
-            component="div"
-            textAlign={"left"}
-            sx={{
-              flexGrow: 1,
-              display: { xs: "block", sm: "block" },
-            }}
-          >
-            During my first summer at WWU I joined the Lee lab. The Lee lab is a
-            team of researchers investigating a novel role of small guide
-            molecules (small RNAs) in maintaining genome integrity. My role in
-            the lab is to investigate origins of these small RNAs and understand
-            how changes in these sRNAs results in the phenotypes we are seeing.
-            I have developed a new pipeline and tools to analyze both of these
-            questions. During my time in the lab I have learned extensive
-            technical skills such as Western blots, genomic analysis, and
-            refined programming languages proficiency for these tasks. I have
-            also gained important soft skills such as independence from running
-            my own project, communication with lab members and outside of the
-            lab, and presentation skills.{" "}
-          </Typography>
-        </Grid>
-        <Grid size={4}>
+        <Grid size={{ xs: 12, md: 4 }}>
           <Box
             component="img"
             src={tetrahymena}
@@ -63,6 +40,29 @@ export function LeeLab() {
             Tetrahymena thermophila — Robinson R (2006) PLoS Biol, CC BY 2.5
           </Typography>
         </Grid>
+        <Grid size={{ xs: 12, md: 8 }} sx={{ alignItems: "center" }}>
+          <Typography
+            component="div"
+            textAlign={"left"}
+            sx={{
+              flexGrow: 1,
+              display: { xs: "block", sm: "block" },
+            }}
+          >
+            During my first summer at WWU I joined the Lee lab. The Lee lab is a
+            team of researchers investigating a novel role of small guide
+            molecules (small RNAs) in maintaining genome integrity. My role in
+            the lab is to investigate origins of these small RNAs and understand
+            how changes in these sRNAs results in the phenotypes we are seeing.
+            I have developed a new pipeline and tools to analyze both of these
+            questions. During my time in the lab I have learned extensive
+            technical skills such as Western blots, genomic analysis, and
+            refined programming languages proficiency for these tasks. I have
+            also gained important soft skills such as independence from running
+            my own project, communication with lab members and outside of the
+            lab, and presentation skills.{" "}
+          </Typography>
+        </Grid>
       </Grid>
     </Container>
   );
@@ -75,7 +75,7 @@ export function EduRes() {
       <h4> February 2023 - May 2024 </h4>
 
       <Grid container spacing={5} width="80vw" sx={{ alignItems: "center" }}>
-        <Grid size={4}>
+        <Grid size={{ xs: 12, md: 4 }}>
           <Box
             component="img"
             src="/images/education/edu_research.webp"
@@ -87,7 +87,7 @@ export function EduRes() {
             }}
           />
         </Grid>
-        <Grid size={8} sx={{ alignItems: "center" }}>
+        <Grid size={{ xs: 12, md: 8 }} sx={{ alignItems: "center" }}>
           <Typography
             component="div"
             textAlign={"left"}
@@ -127,7 +127,22 @@ export function Biotech() {
       <h4>May 2022 - December 2022 </h4>
 
       <Grid container spacing={5} width="80vw" sx={{ alignItems: "center" }}>
-        <Grid size={8} sx={{ alignItems: "center" }}>
+        <Grid size={{ xs: 12, md: 4 }}>
+          <Box
+            component="img"
+            src="/images/biotech/gel_electrophoresis.webp"
+            alt="Agarose gel with DNA on UV transilluminator"
+            sx={{
+              width: "100%",
+              height: "auto",
+              borderRadius: 10,
+            }}
+          />
+          <Typography variant="caption" sx={{ display: "block", textAlign: "center", mt: 1, fontStyle: "italic" }}>
+            Agarose gel with DNA ladders — Dirk Hünniger, CC BY-SA 2.0
+          </Typography>
+        </Grid>
+        <Grid size={{ xs: 12, md: 8 }} sx={{ alignItems: "center" }}>
           <Typography
             component="div"
             textAlign={"left"}
@@ -153,30 +168,6 @@ export function Biotech() {
             experiments, and approaching research questions. This project
             equipped me with the skills that I used in future projects and
             sparked a passion for research.
-          </Typography>
-        </Grid>
-
-        <Grid size={4}>
-          <Box
-            component="img"
-            src="/images/biotech/gel_electrophoresis.webp"
-            alt="Agarose gel with DNA on UV transilluminator"
-            sx={{
-              width: "100%",
-              height: "auto",
-              borderRadius: 10,
-            }}
-          />
-          <Typography
-            variant="caption"
-            sx={{
-              display: "block",
-              textAlign: "center",
-              mt: 1,
-              fontStyle: "italic",
-            }}
-          >
-            Agarose gel with DNA ladders — Dirk Hünniger, CC BY-SA 2.0
           </Typography>
         </Grid>
       </Grid>

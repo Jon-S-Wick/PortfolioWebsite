@@ -26,7 +26,8 @@ const leftPages = [
 
   { name: "Skills", path: "/", element: "skills" },
   // { name: "Personal Life", path: "/PersonalLife", element: "" },
-  { name: "|    CV", path: "/CV", element: "" },
+  { name: "|    CV", path: "/CV", element: "" },
+  { name: "Publications", path: "/Publications", element: "" },
 ];
 export function Socials() {
   return (

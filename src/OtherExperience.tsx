@@ -15,7 +15,7 @@ export function MBSC() {
       <h2>Molecular Bioscience Club Lead</h2>
 
       <Grid container spacing={5} width="80vw" sx={{ alignItems: "center" }}>
-        <Grid size={4}>
+        <Grid size={{ xs: 12, md: 4 }}>
           <Box
             component="img"
             src="/images/mbsc/mbsc_cake.webp"
@@ -30,7 +30,7 @@ export function MBSC() {
             Molecular Bioscience club bake off
           </Typography>
         </Grid>
-        <Grid size={8} sx={{ alignItems: "center" }}>
+        <Grid size={{ xs: 12, md: 8 }} sx={{ alignItems: "center" }}>
           <Typography
             component="div"
             textAlign={"left"}
@@ -56,7 +56,22 @@ export function SotaBot() {
       <h2>Programming Lead</h2>
 
       <Grid container spacing={5} width="80vw" sx={{ alignItems: "center" }}>
-        <Grid size={8} sx={{ alignItems: "center" }}>
+        <Grid size={{ xs: 12, md: 4 }}>
+          <Box
+            component="img"
+            src="https://static.wixstatic.com/media/d5980a_0953463042244e94ae04a3dd29bedaad~mv2.jpg"
+            alt="SOTAbots FRC team 2557 robot Hornet (2022)"
+            sx={{
+              width: "100%",
+              height: "auto",
+              borderRadius: 10,
+            }}
+          />
+          <Typography variant="caption" sx={{ display: "block", textAlign: "center", mt: 1, fontStyle: "italic" }}>
+            SOTAbots FRC Team 2557 — 2022 robot "Hornet" (sotabots.com)
+          </Typography>
+        </Grid>
+        <Grid size={{ xs: 12, md: 8 }} sx={{ alignItems: "center" }}>
           <Typography
             component="div"
             textAlign={"left"}
@@ -73,22 +88,6 @@ export function SotaBot() {
             that I still use today. Our team had an emphasis on student
             leadership which allowed me to become self-sufficient and learn the
             joys of teaching students.
-          </Typography>
-        </Grid>
-
-        <Grid size={4}>
-          <Box
-            component="img"
-            src="https://static.wixstatic.com/media/d5980a_0953463042244e94ae04a3dd29bedaad~mv2.jpg"
-            alt="SOTAbots FRC team 2557 robot Hornet (2022)"
-            sx={{
-              width: "100%",
-              height: "auto",
-              borderRadius: 10,
-            }}
-          />
-          <Typography variant="caption" sx={{ display: "block", textAlign: "center", mt: 1, fontStyle: "italic" }}>
-            SOTAbots FRC Team 2557 — 2022 robot "Hornet" (sotabots.com)
           </Typography>
         </Grid>
       </Grid>

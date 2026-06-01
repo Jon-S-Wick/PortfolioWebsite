@@ -11,10 +11,11 @@ import Skills from "./Skills.tsx";
 
 export function MBSC() {
   return (
-    <Container>
-      <h2>Molecular Bioscience Club Lead</h2>
-
-      <Grid container spacing={5} width="80vw" sx={{ alignItems: "center" }}>
+    <Box sx={{ width: "100%" }}>
+      <Grid container spacing={3} sx={{ alignItems: "flex-start" }}>
+        <Grid size={{ xs: 12 }} sx={{ display: { xs: "block", md: "none" } }}>
+          <h2>Molecular Bioscience Club Lead</h2>
+        </Grid>
         <Grid size={{ xs: 12, md: 4 }}>
           <Box
             component="img"
@@ -22,7 +23,8 @@ export function MBSC() {
             alt="Molecular Bioscience Club"
             sx={{
               width: "100%",
-              height: "auto",
+              aspectRatio: "4/3",
+              objectFit: "cover",
               borderRadius: 10,
             }}
           />
@@ -31,6 +33,9 @@ export function MBSC() {
           </Typography>
         </Grid>
         <Grid size={{ xs: 12, md: 8 }} sx={{ alignItems: "center" }}>
+          <Box sx={{ display: { xs: "none", md: "block" } }}>
+            <h2>Molecular Bioscience Club Lead</h2>
+          </Box>
           <Typography
             component="div"
             textAlign={"left"}
@@ -47,15 +52,16 @@ export function MBSC() {
           </Typography>
         </Grid>
       </Grid>
-    </Container>
+    </Box>
   );
 }
 export function SotaBot() {
   return (
-    <Container>
-      <h2>Programming Lead</h2>
-
-      <Grid container spacing={5} width="80vw" sx={{ alignItems: "center" }}>
+    <Box sx={{ width: "100%" }}>
+      <Grid container spacing={3} sx={{ alignItems: "flex-start" }}>
+        <Grid size={{ xs: 12 }} sx={{ display: { xs: "block", md: "none" } }}>
+          <h2>Programming Lead</h2>
+        </Grid>
         <Grid size={{ xs: 12, md: 4 }}>
           <Box
             component="img"
@@ -63,7 +69,8 @@ export function SotaBot() {
             alt="SOTAbots FRC team 2557 robot Hornet (2022)"
             sx={{
               width: "100%",
-              height: "auto",
+              aspectRatio: "4/3",
+              objectFit: "cover",
               borderRadius: 10,
             }}
           />
@@ -72,6 +79,9 @@ export function SotaBot() {
           </Typography>
         </Grid>
         <Grid size={{ xs: 12, md: 8 }} sx={{ alignItems: "center" }}>
+          <Box sx={{ display: { xs: "none", md: "block" } }}>
+            <h2>Programming Lead</h2>
+          </Box>
           <Typography
             component="div"
             textAlign={"left"}
@@ -91,7 +101,7 @@ export function SotaBot() {
           </Typography>
         </Grid>
       </Grid>
-    </Container>
+    </Box>
   );
 }
 

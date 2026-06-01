@@ -6,17 +6,18 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import profilephoto from "public/images/pro-FoEfCRZd.webp";
-import tetrahymena from "public/images/tetrahymena_thermophila.png";
+import tetrahymena from "public/images/tetrahymena_thermophila_rotated.webp";
 import Introduction from "./Introduction.tsx";
 import Skills from "./Skills.tsx";
 
 export function LeeLab() {
   return (
-    <Container>
-      <h2>Undergraduate Research | Lee Lab @ WWU</h2>
-      <h4>June 2024 - present </h4>
-
-      <Grid container spacing={5} width="80vw" sx={{ alignItems: "center" }}>
+    <Box sx={{ width: "100%" }}>
+      <Grid container spacing={3} sx={{ alignItems: "flex-start" }}>
+        <Grid size={{ xs: 12 }} sx={{ display: { xs: "block", md: "none" } }}>
+          <h2>Undergraduate Research | Lee Lab @ WWU</h2>
+          <h4>June 2024 - present </h4>
+        </Grid>
         <Grid size={{ xs: 12, md: 4 }}>
           <Box
             component="img"
@@ -24,7 +25,8 @@ export function LeeLab() {
             alt="Tetrahymena thermophila"
             sx={{
               width: "100%",
-              height: "auto",
+              aspectRatio: "4/3",
+              objectFit: "cover",
               borderRadius: 10,
             }}
           />
@@ -41,6 +43,10 @@ export function LeeLab() {
           </Typography>
         </Grid>
         <Grid size={{ xs: 12, md: 8 }} sx={{ alignItems: "center" }}>
+          <Box sx={{ display: { xs: "none", md: "block" } }}>
+            <h2>Undergraduate Research | Lee Lab @ WWU</h2>
+            <h4>June 2024 - present </h4>
+          </Box>
           <Typography
             component="div"
             textAlign={"left"}
@@ -64,17 +70,18 @@ export function LeeLab() {
           </Typography>
         </Grid>
       </Grid>
-    </Container>
+    </Box>
   );
 }
 
 export function EduRes() {
   return (
-    <Container>
-      <h2>Education Research | Dr. Sushil Oswal</h2>
-      <h4> February 2023 - May 2024 </h4>
-
-      <Grid container spacing={5} width="80vw" sx={{ alignItems: "center" }}>
+    <Box sx={{ width: "100%" }}>
+      <Grid container spacing={3} sx={{ alignItems: "flex-start" }}>
+        <Grid size={{ xs: 12 }} sx={{ display: { xs: "block", md: "none" } }}>
+          <h2>Education Research | Dr. Sushil Oswal</h2>
+          <h4> February 2023 - May 2024 </h4>
+        </Grid>
         <Grid size={{ xs: 12, md: 4 }}>
           <Box
             component="img"
@@ -82,12 +89,20 @@ export function EduRes() {
             alt="Education research"
             sx={{
               width: "100%",
-              height: "auto",
+              aspectRatio: "4/3",
+              objectFit: "cover",
               borderRadius: 10,
             }}
           />
+          <Typography variant="body2" sx={{ mt: 1, fontStyle: "italic", textAlign: "center", color: "#ccc" }}>
+            Poster for the 2024 ACM SIGCSE Conference
+          </Typography>
         </Grid>
         <Grid size={{ xs: 12, md: 8 }} sx={{ alignItems: "center" }}>
+          <Box sx={{ display: { xs: "none", md: "block" } }}>
+            <h2>Education Research | Dr. Sushil Oswal</h2>
+            <h4> February 2023 - May 2024 </h4>
+          </Box>
           <Typography
             component="div"
             textAlign={"left"}
@@ -117,16 +132,17 @@ export function EduRes() {
           </Typography>
         </Grid>
       </Grid>
-    </Container>
+    </Box>
   );
 }
 export function Biotech() {
   return (
-    <Container>
-      <h2>Biotech Intern | Rain Incubator</h2>
-      <h4>May 2022 - December 2022 </h4>
-
-      <Grid container spacing={5} width="80vw" sx={{ alignItems: "center" }}>
+    <Box sx={{ width: "100%" }}>
+      <Grid container spacing={3} sx={{ alignItems: "flex-start" }}>
+        <Grid size={{ xs: 12 }} sx={{ display: { xs: "block", md: "none" } }}>
+          <h2>Biotech Intern | Rain Incubator</h2>
+          <h4>May 2022 - December 2022 </h4>
+        </Grid>
         <Grid size={{ xs: 12, md: 4 }}>
           <Box
             component="img"
@@ -134,7 +150,8 @@ export function Biotech() {
             alt="Agarose gel with DNA on UV transilluminator"
             sx={{
               width: "100%",
-              height: "auto",
+              aspectRatio: "4/3",
+              objectFit: "cover",
               borderRadius: 10,
             }}
           />
@@ -143,6 +160,10 @@ export function Biotech() {
           </Typography>
         </Grid>
         <Grid size={{ xs: 12, md: 8 }} sx={{ alignItems: "center" }}>
+          <Box sx={{ display: { xs: "none", md: "block" } }}>
+            <h2>Biotech Intern | Rain Incubator</h2>
+            <h4>May 2022 - December 2022 </h4>
+          </Box>
           <Typography
             component="div"
             textAlign={"left"}
@@ -171,7 +192,7 @@ export function Biotech() {
           </Typography>
         </Grid>
       </Grid>
-    </Container>
+    </Box>
   );
 }
 

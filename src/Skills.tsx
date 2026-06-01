@@ -18,7 +18,6 @@ import dockerIcon from "devicon/icons/docker/docker-original.svg";
 import gitIcon from "devicon/icons/git/git-original.svg";
 import numpyIcon from "devicon/icons/numpy/numpy-original.svg";
 import pandasIcon from "devicon/icons/pandas/pandas-original.svg";
-import scikitlearnIcon from "devicon/icons/scikitlearn/scikitlearn-original.svg";
 import cIcon from "devicon/icons/c/c-original.svg";
 import cppIcon from "devicon/icons/cplusplus/cplusplus-original.svg";
 import javaIcon from "devicon/icons/java/java-original.svg";
@@ -89,11 +88,6 @@ const Software: SkillItem[] = [
   { name: "Docker", icon: dockerIcon, link: "https://www.docker.com/" },
   { name: "pandas", icon: pandasIcon, link: "https://pandas.pydata.org/" },
   { name: "NumPy", icon: numpyIcon, link: "https://numpy.org/" },
-  {
-    name: "scikit-learn",
-    icon: scikitlearnIcon,
-    link: "https://scikit-learn.org/",
-  },
   { name: "Biopython", icon: GiDna2, link: "https://biopython.org/" },
   { name: "Benchling", icon: FaDna, link: "https://www.benchling.com/" },
   {

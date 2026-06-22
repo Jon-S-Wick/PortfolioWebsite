@@ -76,6 +76,11 @@ const BiologySkills: SkillItem[] = [
     icon: GiDna2,
     link: "https://en.wikipedia.org/wiki/CRISPR",
   },
+  {
+    name: "Sterile/Aseptic Technique",
+    icon: "/images/skills/cell_culture_dish.webp",
+    link: "https://en.wikipedia.org/wiki/Aseptic_technique",
+  },
 ];
 
 const Software: SkillItem[] = [

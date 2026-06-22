@@ -13,7 +13,7 @@ import Skills from "./Skills.tsx";
 export function LeeLab() {
   return (
     <Box sx={{ width: "100%" }}>
-      <Grid container spacing={3} sx={{ alignItems: "flex-start" }}>
+      <Grid container spacing={3} sx={{ alignItems: { xs: "flex-start", md: "center" } }}>
         <Grid size={{ xs: 12 }} sx={{ display: { xs: "block", md: "none" } }}>
           <h2>Undergraduate Research | Lee Lab @ WWU</h2>
           <h4>June 2024 - present </h4>
@@ -77,28 +77,12 @@ export function LeeLab() {
 export function EduRes() {
   return (
     <Box sx={{ width: "100%" }}>
-      <Grid container spacing={3} sx={{ alignItems: "flex-start" }}>
+      <Grid container spacing={3} sx={{ alignItems: { xs: "flex-start", md: "center" } }}>
         <Grid size={{ xs: 12 }} sx={{ display: { xs: "block", md: "none" } }}>
           <h2>Education Research | Dr. Sushil Oswal</h2>
           <h4> February 2023 - May 2024 </h4>
         </Grid>
-        <Grid size={{ xs: 12, md: 4 }}>
-          <Box
-            component="img"
-            src="/images/education/edu_research.webp"
-            alt="Education research"
-            sx={{
-              width: "100%",
-              aspectRatio: "4/3",
-              objectFit: "cover",
-              borderRadius: 10,
-            }}
-          />
-          <Typography variant="body2" sx={{ mt: 1, fontStyle: "italic", textAlign: "center", color: "#ccc" }}>
-            Poster for the 2024 ACM SIGCSE Conference
-          </Typography>
-        </Grid>
-        <Grid size={{ xs: 12, md: 8 }} sx={{ alignItems: "center" }}>
+        <Grid size={{ xs: 12, md: 8 }} sx={{ alignItems: "center", order: { xs: 2, md: 1 } }}>
           <Box sx={{ display: { xs: "none", md: "block" } }}>
             <h2>Education Research | Dr. Sushil Oswal</h2>
             <h4> February 2023 - May 2024 </h4>
@@ -131,6 +115,22 @@ export function EduRes() {
             been essential to my later biology research.
           </Typography>
         </Grid>
+        <Grid size={{ xs: 12, md: 4 }} sx={{ order: { xs: 1, md: 2 } }}>
+          <Box
+            component="img"
+            src="/images/education/edu_research.webp"
+            alt="Education research"
+            sx={{
+              width: "100%",
+              aspectRatio: "4/3",
+              objectFit: "cover",
+              borderRadius: 10,
+            }}
+          />
+          <Typography variant="body2" sx={{ mt: 1, fontStyle: "italic", textAlign: "center", color: "#ccc" }}>
+            Poster for the 2024 ACM SIGCSE Conference
+          </Typography>
+        </Grid>
       </Grid>
     </Box>
   );
@@ -138,7 +138,7 @@ export function EduRes() {
 export function Biotech() {
   return (
     <Box sx={{ width: "100%" }}>
-      <Grid container spacing={3} sx={{ alignItems: "flex-start" }}>
+      <Grid container spacing={3} sx={{ alignItems: { xs: "flex-start", md: "center" } }}>
         <Grid size={{ xs: 12 }} sx={{ display: { xs: "block", md: "none" } }}>
           <h2>Biotech Intern | Rain Incubator</h2>
           <h4>May 2022 - December 2022 </h4>

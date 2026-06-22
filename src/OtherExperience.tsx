@@ -12,7 +12,7 @@ import Skills from "./Skills.tsx";
 export function MBSC() {
   return (
     <Box sx={{ width: "100%" }}>
-      <Grid container spacing={3} sx={{ alignItems: "flex-start" }}>
+      <Grid container spacing={3} sx={{ alignItems: { xs: "flex-start", md: "center" } }}>
         <Grid size={{ xs: 12 }} sx={{ display: { xs: "block", md: "none" } }}>
           <h2>Molecular Bioscience Club Lead</h2>
         </Grid>
@@ -58,7 +58,7 @@ export function MBSC() {
 export function SotaBot() {
   return (
     <Box sx={{ width: "100%" }}>
-      <Grid container spacing={3} sx={{ alignItems: "flex-start" }}>
+      <Grid container spacing={3} sx={{ alignItems: { xs: "flex-start", md: "center" } }}>
         <Grid size={{ xs: 12 }} sx={{ display: { xs: "block", md: "none" } }}>
           <h2>Programming Lead</h2>
         </Grid>

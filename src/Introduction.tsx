@@ -19,19 +19,7 @@ export default function Introduction() {
       }}
     >
       <Grid container spacing={5} width="100vw" sx={{ alignItems: "center" }}>
-        <Grid size={{ xs: 12, md: 4 }}>
-          <Box
-            component="img"
-            src={profilephoto}
-            alt="profile photo"
-            sx={{
-              width: "100%",
-              height: "auto",
-              borderRadius: 10,
-            }}
-          />
-        </Grid>
-        <Grid size={{ xs: 12, md: 8 }} sx={{ alignItems: "center" }}>
+        <Grid size={{ xs: 12, md: 8 }} sx={{ alignItems: "center", order: { xs: 2, md: 1 } }}>
           <Typography
             variant="h1"
             component="div"
@@ -64,6 +52,18 @@ export default function Introduction() {
           >
             Molecular, Cellular, and Computational Biologist
           </Typography>
+        </Grid>
+        <Grid size={{ xs: 12, md: 4 }} sx={{ order: { xs: 1, md: 2 } }}>
+          <Box
+            component="img"
+            src={profilephoto}
+            alt="profile photo"
+            sx={{
+              width: "100%",
+              height: "auto",
+              borderRadius: 10,
+            }}
+          />
         </Grid>
       </Grid>
     </Box>

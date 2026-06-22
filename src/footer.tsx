@@ -19,11 +19,6 @@ const links = [
     href: "mailto:jonwick@wickbioscience.com",
   },
   {
-    icon: <IoGlobeSharp />,
-    label: "wickbioscience.com",
-    href: "https://wickbioscience.com",
-  },
-  {
     icon: <FaGithub />,
     label: "github.com/Jon-S-Wick",
     href: "https://github.com/Jon-S-Wick",

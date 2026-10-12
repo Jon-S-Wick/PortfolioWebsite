@@ -19,7 +19,10 @@ export default function Introduction() {
       }}
     >
       <Grid container spacing={5} width="100vw" sx={{ alignItems: "center" }}>
-        <Grid size={{ xs: 12, md: 8 }} sx={{ alignItems: "center", order: { xs: 2, md: 1 } }}>
+        <Grid
+          size={{ xs: 12, md: 8 }}
+          sx={{ alignItems: "center", order: { xs: 2, md: 1 } }}
+        >
           <Typography
             variant="h1"
             component="div"
@@ -51,6 +54,26 @@ export default function Introduction() {
             }}
           >
             Molecular, Cellular, and Computational Biologist
+          </Typography>
+          <Typography
+            variant="body"
+            component="div"
+            textAlign={"center"}
+            sx={{
+              justifyContent: "center",
+              flexGrow: 1,
+              display: { xs: "block", sm: "block" },
+            }}
+          >
+            <br />
+            This website is for me to document the progression throughout my
+            carreer. I am dedicated to advancing cancer research and becoming a
+            scientific communicator. My passion is for research and giving
+            others the opportunity to get a glimpse into the beautiful world of
+            biological research. There is much yet to come!
+            <br />
+            <br />I also hope to improve public understanding of science. Both
+            to share the joys of science and fight disinformation.
           </Typography>
         </Grid>
         <Grid size={{ xs: 12, md: 4 }} sx={{ order: { xs: 1, md: 2 } }}>

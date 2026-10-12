@@ -22,32 +22,60 @@ function Home2() {
               <h2>WWU '26 Molecular and Cellular Biology, CS minor</h2>
               <h3>
                 I am a biologist and a programmer interested in an
-                interdisciplinary approach to research.
+                interdisciplinary approach to research. I utilize a mix of
+                molecular and computational methods to evaluate molecular
+                pathways. I hope to contribute to research that not only
+                improves patient outcomes but also reduces toxicity, improving
+                patient survival and experience.
               </h3>
               <h3>
                 I fell in love with biology my junior year of high school during
-                a biotech class. Ever since I did my first PCR I knew this was
-                the right field for me. Throughout my junior year my interest
-                deepened until I decided to join the lab in which my teacher
-                worked. While starting research I realized how my love for
-                science and learning could be used to help people and the
-                environment. Research became the pinacle of learning and
-                contributing to something meaningful.
+                a biotech class. Ever since I did my first PCR I knew I wanted
+                more. Throughout my junior year my interest continued to deepen
+                eventually leading to joining the lab in which my teacher
+                worked. I started a project investigating how we could track
+                invasive species using environmental DNA. It was then that I
+                realized how my love for computer science could pair with
+                biological investigation to mean something greater.
                 <br />
                 <br />
-                Ever since then I have been interested in education and
-                research. Participating in educational research with Dr. Sushil
-                Oswal, UW and RNA interference research with Dr. Lee, WWU. I am
-                interested in pursuing a career in research with a focus on
-                understanding molecular mechanisms of disease progression and
-                translating that knowledge into potential treatments.
+                Ever since my time at RAIN incubator I have been pursuing
+                research in any copacity I can. I participated in educational
+                research with Dr. Sushil Oswal, UW. We were investigating the
+                effects of student led learning in robotics teams. This expanded
+                my knowledge of cultural impacts to learning, qualitative
+                research, and allowed me to contribute to a research project
+                from conception to publication. I loved the research process
+                itself, solidifying my interest in pursuing a career in
+                research.
                 <br />
                 <br />
-                Outside of the lab, I enjoy long hikes in the mountains,
-                backpacking, and climbing with my friends. When I am inside, I
-                love bringing old electronics back to life and building/
-                programming new projects. I also enjoy playing chess and
-                reading.
+                As soon as I started at WWU I knew that I wanted to pursue
+                research. I immediatly started looking for labs to join and
+                emailed Dr. Lee. I joined the lab the summer after my first year
+                and started investigating RNA interference pathways involved in
+                maintaining genome integrity in
+                <i>Tetrahymena thermophila</i>
+                with Dr. Lee at WWU. I joined this lab as I wanted to further
+                the understanding how genomic integrity is lost and results in
+                mutations that lead to disease progression and cancer.
+                <br />
+                <br />
+                Through my experience in genomic analysis and molecular
+                techniques, as well as coursework in immunobiology, I found an
+                interest in utilizing a multidisciplinary approach to analyzing
+                disease progression I am interested in pursuing a career in
+                research with a focus on understanding molecular mechanisms of
+                disease progression and translating that knowledge into
+                precision treatments.
+                <br />
+                <br />
+                Outside of the lab, I love to spend time in nature. I enjoy long
+                hikes in the mountains, backpacking, and climbing with my
+                friends. I have found a community in circus groups practicing
+                unicycling and juggling. When I am inside, I love bringing old
+                electronics back to life and building/programming new projects.
+                I also enjoy playing chess and reading.
                 <br />
                 <br />
                 Current favorite books: 'The Overstory' by Richard Powers and
